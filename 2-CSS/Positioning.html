@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Relative Positioning</title>
+		<style type="text/css">
+			#first{
+				color: blue;
+				background-color:#BCF5A9;
+				width: 200px;
+				position: relative;
+				left:200px;
+				top:100px;
+				z-index:1;
+			}
+			
+			#second{
+				color:#2EFE2E;
+				background-color:#0080FF;
+				width: 300px;
+				position:relative;
+				z-index:2;
+				opacity:0.5;
+			}
+			#bold{
+				font-size:300%;
+				color: red;
+				font-weight:bold;
+			}
+			#underline{
+				text-decoration:underline;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="first" class="square">
+			<p>The quick brown fox jumped over the lazy dog.</p>
+			<p>Wow, I love internal CSS</p>
+		</div>
+		<div id="second" class="square">
+			<p> This is some more text. <span id="underline">And this text is underlined.</span></p>
+			<p><span id="bold">CSS is cool!</span></p>
+		</div>
+			<p>This paragraph is not floated.</p>
+		
+	</body>
+</html>

@@ -1,0 +1,16 @@
+			#header{
+				font-size:150%;
+				font-weight: bold;
+			}
+			
+			#desc{
+				font-size:150%;
+			}
+			
+			#shape{
+				width:200px;
+				height:200px;
+				background-color:red;
+				display:none;
+				position: relative;
+			}

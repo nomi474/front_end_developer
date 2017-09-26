@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>HTML5 and CSS3</title>
+		<style type="text/css">
+
+		</style>
+	</head>
+	<body>
+		<form id="myForm" action="processForm.php">
+			<p>Placeholder: <input type="text" placeholder="Insert Name Here"></p>
+			<p>Autofocus: <input type="text" autofocus></p>
+			<p>Autocomplete off: <input type="text" autocomplete="off"></p>
+			<p>Required: <input type="text" required></p>
+			<p>Email: <input type="email"></p>
+			<p>Pattern: <input type="text" pattern="[0-9]"></p>
+				<datalist id="names">
+					<select>
+						<option value="Nomi">Nomi</option>
+						<option value="Rayhan">Rayhan</option>
+						<option value="Alisha">Alisha</option>
+						<option value="Aafiya">Aafiya</option>
+						<option value="Sufyan">Sufyan</option>
+					</select>
+				</datalist>
+			<p>Autocomplete: <input type="text" list="names"></p>
+			<p>Multiple file upload: <input type="file" multiple></p>
+			<p><input type="submit" value="submit to processForm2.php" formaction="processForm2.php" formethod="post"></p>
+		</form>
+			<p>Code outside form: <input form="myForm" type="text"></p>
+			<video width="320" height="240" controls id="video">
+				<source src="./video.mp4" type="video/mp4">
+				Please upgrade your browser!
+			</video>
+			<button id="play">Play</button>
+			
+			<audio controls id="audio">
+				<source src="./audio.mp3" type="audio/mpeg">
+				Please upgrade your browser!
+			</audio>
+			<script>
+				document.getElementById("play").onclick = function(){
+					if (document.getElementById("video").paused){
+						document.getElementById("video").play();
+						this.innerHTML = "Pause";
+					}else{
+						document.getElementById("video").pause();
+						this.innerHTML = "Play";
+					}
+				}
+			</script>
+	</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Hide shapes</title>
+		<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> -->
+		<script type="text/javascript" src="jquery.min.js"></script>
+		<style type="text/css">
+			#circle{
+				width:150px;
+				height:150px;
+				border-radius:50%;
+				background-color:green;
+				margin:10px;
+			}
+			
+			.square{
+				width:150px;
+				height:150px;
+				background-color:red;
+				margin:10px;
+			}
+			
+		</style>
+	</head>
+	<body>		
+			<div class="shape" id="circle">
+			</div>
+			<div class="square">
+			</div>
+			<div class="square">
+			</div>
+			<script type="text/javascript">
+			//The below statement is equivalent to 
+			//document.getElementById("circle").onclick = function(){}
+				$("div").click(function(){
+					//$(this).css("display","none");
+					if($(this).attr("id") == "circle"){
+						alert("You clicked a circle.");
+					}else{
+						alert("You clicked on a square.")
+					}
+				});
+			</script>
+	</body>
+</html>

@@ -1,0 +1,5 @@
+random shape square or circle
+ramdom position
+random size
+random color
+random delay before the next square or circle appears

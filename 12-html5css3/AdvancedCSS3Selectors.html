@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Advanced CSS3 Selectors</title>
+		<style type="text/css">
+			h1 {
+				color:red;
+			}
+			.green{
+				color:green;
+			}
+			#blue{
+				color:blue;
+				font-size:200%;
+			}
+			div p{
+				font-weight:bold;
+			}
+			/*we want to select all of the paragraphs in the divs that has an h3 element in it.*/
+			h3 ~ p{
+				text-decoration: underline;
+			}
+			/*we want to select all of the paragraphs in the divs that are followed by a h3 element in the div.*/
+			h3 + p{
+				font-size:150%;
+			}
+			
+			a[target]{
+				color:yellow;
+			}
+			
+			a[href*="google"]{
+				font-size:250%;
+			}
+		</style>
+	</head>
+	<body>
+		<!--
+			*= - begins with 
+			$= - ends with
+			~= - has the value between two spaces
+			|= - has the value seperated by hyphens (-)
+		-->
+		<h1>I am a heading</h1>
+		<div>
+			<h3>I am an h3 element</h3>
+			<p class="green">I am a paragraph</p>
+			<p>I am in the div.</p>
+			<a target="_blank" href="http://www.google.com">I am a link</a>
+		</div>
+		<div>
+			<h3>Hello</h3>
+			<p>I am in another div.</p>
+		</div>
+		<p>I am outside the div</p>
+		<a href="https://mail.google.com/mail" >I am another link</a>
+	</body>
+</html>

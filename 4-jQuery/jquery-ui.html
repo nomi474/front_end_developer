@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jQuery UI</title>
+		<script type="text/javascript" src="jquery.min.js"></script>
+		<script src="jquery-ui/jquery-ui.min.js"></script>
+		<link href="jquery-ui/jquery-ui.css" rel="stylesheet">
+		<style>
+		  #draggable { width: 150px; height: 150px; padding: 0.5em; background-color: red; }
+		  #droppable { width: 250px; height: 250px; padding: 0.5em; background-color: orange; }
+		  #box {width: 500px; height: 200px; background-color: green;}
+		  #resizable { width: 150px; height: 150px; background-color: yellow; }
+		  #also { width: 150px; height: 150px; background-color: blue; }
+		  #accordion{height:100px; width:600px;}
+		  #sortable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
+		</style>
+	</head>
+	<body>		
+		<div id="draggable">
+		  <p>Drag me around</p>
+		</div>
+		<div id="droppable">
+			Drop the draggable here.
+		</div>
+		<div id="box">
+			<span>I am stuck in a box</span>
+		</div>
+		<div id="resizable">
+		  <h3>Resizable</h3>
+		</div>
+		<div id="also">
+			<h3>Also div</h3>
+		</div>
+		<div id="accordion">
+		  <h3>Section 1</h3>
+		  <div>
+			<p>
+			Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+			ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
+			amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
+			odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
+			</p>
+		  </div>
+		  <h3>Section 2</h3>
+		  <div>
+			<p>
+			Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+			purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
+			velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
+			suscipit faucibus urna.
+			</p>
+		  </div>
+		  <h3>Section 3</h3>
+		  <div>
+			<p>
+			Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
+			Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
+			ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
+			lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
+			</p>
+			<ul>
+			  <li>List I am item  one</li>
+			  <li>List I am item  two</li>
+			  <li>List I am item  three</li>
+			</ul>
+		  </div>
+		  <h3>Section 4</h3>
+		  <div>
+			<p>
+			Cras dictum. Pellentesque habitant morbi tristique senectus et netus
+			et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
+			faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
+			mauris vel est.
+			</p>
+			<p>
+			Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
+			Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+			inceptos himenaeos.
+			</p>
+		  </div>
+		</div>
+		<script type="text/javascript">
+			$( "#draggable" ).draggable({ axis: "y" });
+			$( "span" ).draggable({ containment: "#box", scroll: false });
+			$( "#droppable" ).droppable({
+			  drop: function( event, ui ) {
+				alert("Dropped!");
+				console.log(event);
+			  }
+			});
+			$( "#accordion" ).accordion();
+			$( "#resizable" ).resizable({
+				alsoResize: "#also",
+				grid:50,
+				resize: function( event, ui ) {
+					if ($("#resizable").width() > 300){
+						alert("big enough");
+					}
+				}
+			});
+			$( "#also" ).resizable();
+		</script>
+	</body>
+</html>

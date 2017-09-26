@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Regex</title>
+		<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> -->
+		<script type="text/javascript" src="jquery.min.js"></script>
+		<style type="text/css">
+
+			
+		</style>
+	</head>
+	<body>		
+			<div class="shape" id="circle">
+			</div>
+			<script type="text/javascript">
+				//var regex = /Great/i;
+				var regex = /e/gi;
+				var string = "Regex is grEat!";
+				
+				var result = string.match(regex);
+				alert(result);
+			</script>
+	</body>
+</html>

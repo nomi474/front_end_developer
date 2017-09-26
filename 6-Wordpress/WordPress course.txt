@@ -1,0 +1,20 @@
+udemy.com
+godaddy.com
+
+athemes.com
+Theme name: Moesia -- Get the free version
+
+google favicon creator
+www.favicon.cc
+
+font awesome cheatsheet
+
+smartdeveloper.890m.com
+
+http://79.170.44.222/smartprogrammer.com/
+
+Wordpress credentials:
+Username: smartprogrammer
+Password: 
+
+ %w - Day of the week (Sunday is 0, 0..6)

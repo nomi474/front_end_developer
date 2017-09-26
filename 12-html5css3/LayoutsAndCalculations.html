@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Transformations and Animations</title>
+		<style type="text/css">
+			#multi-column{
+				-webkit-column-count: 3;
+				-moz-column-count: 3;
+				column-count: 3;
+				
+				-webkit-column-gap: 40px;
+				-moz-column-gap: 40px;
+				column-gap: 40px;
+				
+				-webkit-column-rule-style:  solid;
+				column-rule-style:  solid;
+				column-rule-style:  solid;
+				
+				-webkit-column-rule-width:  1px;
+				-moz-column-rule-width:  1px;
+				column-rule-width:  1px;
+				
+				-webkit-column-rule-color:  grey;
+				-moz-column-rule-color:  grey;
+				column-rule-color:  grey;
+			}
+			h2{
+				-webkit-column-span: all;
+				column-span: all;
+			}
+			
+			header{
+				width:100%;
+				height:50px;
+				background-color:grey;
+			}
+			body{
+				margin:0;
+			}
+			
+			#container{
+				width:100%;
+				background-color:green;	
+				height:-webkit-calc(100% - 50px);
+				height:calc(100% - 50px);
+				position:absolute;					
+			}
+			.flexbox-container{
+				display:flex;
+				display:-webkit-flex;
+				width:100%;
+				height:500px;
+				background-color:aqua;
+				/*
+				flex-direction:row-reverse;
+				-webkit-flex-direction:row-reverse;
+				flex-direction:column;
+				-webkit-flex-direction:column;	
+				*/
+				flex-wrap: wrap; /* nowrap, wrap-reverse*/
+				-webkit-flex-wrap: wrap;
+			}
+			.flexbox-item{
+				background-color:bisque;
+				width:100px;
+				height:100px;
+				margin: 10px;
+				box-sizing: border-box; /* content-box inherit padding-box */
+			}
+		</style>
+	</head>
+	<body>
+		<header></header>
+		<div id="container">
+			<div class="flexbox-container">
+				<div class="flexbox-item">Item 1</div>
+				<div class="flexbox-item" style="border: 5px solid grey; padding: 10px">Item 2</div>
+				<div class="flexbox-item">Item 3</div>
+				<div class="flexbox-item">Item 4</div>
+				<div class="flexbox-item">Item 5</div>
+				<div class="flexbox-item">Item 6</div>
+				<div class="flexbox-item">Item 7</div>
+			</div>
+		</div>
+		<div id="multi-column">
+		<h2>News for Nerds</h2>
+		Hashtag readymade pop-up XOXO mixtape health goth, fanny pack iPhone. Gochujang echo park +1 aesthetic freegan, lo-fi 90's selfies gastropub bitters. Green juice VHS tbh crucifix, wolf artisan everyday carry four loko semiotics kogi viral 90's mlkshk poke. Taxidermy hexagon banh mi fashion axe meggings stumptown, yuccie wayfarers. Sriracha master cleanse williamsburg farm-to-table echo park portland, vexillologist direct trade normcore vaporware poutine chicharrones ennui. Ennui celiac kombucha freegan, unicorn tilde coloring book. Messenger bag edison bulb poke, vexillologist green juice kinfolk try-hard pop-up hammock iPhone austin microdosing XOXO.<br><br>
+
+Pitchfork freegan synth, enamel pin scenester hammock cornhole williamsburg cray. Master cleanse health goth cray, lomo fingerstache jianbing retro quinoa fap kale chips sriracha. Salvia pinterest chartreuse, farm-to-table paleo four dollar toast photo booth pug heirloom listicle lo-fi. +1 seitan chillwave ramps pop-up, fingerstache flexitarian. Woke mumblecore portland, chambray hashtag vexillologist freegan. Distillery cold-pressed flexitarian, VHS next level enamel pin humblebrag cardigan woke health goth gentrify master cleanse. 3 wolf moon post-ironic bicycle rights venmo, leggings before they sold out whatever.
+<br><br>
+Etsy celiac shoreditch swag jean shorts neutra, lumbersexual skateboard flexitarian succulents viral locavore unicorn brunch lyft. Polaroid before they sold out distillery narwhal, hot chicken post-ironic heirloom echo park yuccie semiotics leggings forage. Kale chips hexagon coloring book normcore. Blog pitchfork helvetica, 8-bit chambray activated charcoal irony gluten-free 3 wolf moon glossier freegan. Vexillologist franzen salvia 8-bit four loko, fingerstache mustache af health goth kogi venmo. Gastropub green juice plaid man braid, craft beer trust fund put a bird on it. Flannel synth forage, trust fund disrupt whatever waistcoat hell of four loko messenger bag.</div>
+	</body>
+</html>

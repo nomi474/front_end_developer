@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Fade & Hide shapes</title>
+		<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> -->
+		<script type="text/javascript" src="jquery.min.js"></script>
+		<style type="text/css">
+			#circle{
+				width:150px;
+				height:150px;
+				border-radius:50%;
+				background-color:green;
+				margin:10px;
+			}
+			
+			.square{
+				width:150px;
+				height:150px;
+				background-color:red;
+				margin:10px;
+			}
+			
+		</style>
+	</head>
+	<body>	
+			<p>Church-key fashion axe hexagon biodiesel, DIY leggings godard affogato schlitz deep v microdosing single-origin coffee small batch. Mixtape schlitz DIY prism pork belly. Celiac paleo meh PBR&B meggings, single-origin coffee bushwick listicle before they sold out chartreuse lo-fi poutine typewriter organic kinfolk. Retro deep v ennui, cred YOLO helvetica meggings franzen mixtape. Literally locavore small batch DIY.</p>
+			<button id="toggle">Toggle text</button>
+
+			<!--<div class="shape" id="circle">
+			</div>
+			<div class="square">
+			</div>
+			<div class="square">
+			</div>
+			<script type="text/javascript">
+			/*
+			//The below statement is equivalent to 
+			//document.getElementById("circle").onclick = function(){}
+				$("div").click(function(){
+					$(this).fadeOut("slow", function(){
+						alert("Fadeout has finished.");
+					});
+					//$(this).hide();
+					
+				});
+			
+				$("#fadeout").click(function(){
+					$("p").fadeOut("slow");
+				});
+				$("#fadein").click(function(){
+					$("p").fadeIn("slow");
+				});*/-->
+			<script type="text/javascript">
+				$("#toggle").click(function(){
+					if($("p").css("display") == "none"){
+						$("p").fadeIn("slow");
+					}else{			
+						$("p").fadeOut("slow");
+					}
+				});
+			</script>
+	</body>
+</html>
